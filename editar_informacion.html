@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Información</title>
+    <link rel="stylesheet" href="styles_edit.css" />
+  </head>
+  <body>
+    <header class="form-header">
+      <div class="overlay"></div>
+      <div class="form-container">
+        <h1>Editar Información</h1>
+        <form id="editar-form">
+          <label for="nombre">Nombre Completo:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            value="[Nombre del Usuario]"
+            required
+          />
+
+          <label for="correo">Correo Electrónico:</label>
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            value="[Correo del Usuario]"
+            required
+          />
+
+          <label for="password">Contraseña Nueva (opcional):</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Deja en blanco si no deseas cambiarla"
+          />
+
+          <label for="confirmar-password">Confirmar Contraseña Nueva:</label>
+          <input
+            type="password"
+            id="confirmar-password"
+            name="confirmar-password"
+            placeholder="Deja en blanco si no deseas cambiarla"
+          />
+
+          <button type="submit" class="btn-primary">Guardar Cambios</button>
+        </form>
+        <p><a href="dashboard.html">Volver al Dashboard</a></p>
+      </div>
+    </header>
+  </body>
+</html>

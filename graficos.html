@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gráficos de Progreso</title>
+    <link rel="stylesheet" href="styles_graficos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Incluir Chart.js -->
+  </head>
+  <body>
+    <header class="charts-header">
+      <h1>Gráficos de Progreso</h1>
+      <p>Visualiza tu progreso a través del análisis de tu salud mental.</p>
+    </header>
+    <main>
+      <section class="chart-card">
+        <h2>Nivel de Estrés a lo Largo del Tiempo</h2>
+        <canvas id="stressChart"></canvas>
+      </section>
+
+      <section class="chart-card">
+        <h2>Nivel de Ansiedad por Mes</h2>
+        <canvas id="anxietyChart"></canvas>
+      </section>
+
+      <section class="chart-card">
+        <h2>Estado de Ánimo General</h2>
+        <canvas id="moodChart"></canvas>
+      </section>
+
+      <button
+        class="btn-primary"
+        onclick="window.location.href='dashboard.html'"
+      >
+        Volver al Dashboard
+      </button>
+    </main>
+
+    <script>
+      // Gráfico de Estrés
+      const ctx1 = document.getElementById("stressChart").getContext("2d");
+      new Chart(ctx1, {
+        type: "line",
+        data: {
+          labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo"],
+          datasets: [
+            {
+              label: "Nivel de Estrés",
+              data: [3, 5, 4, 6, 7],
+              borderColor: "rgba(255, 99, 132, 1)",
+              backgroundColor: "rgba(255, 99, 132, 0.2)",
+              borderWidth: 2,
+              fill: true,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: true,
+              position: "top",
+            },
+          },
+        },
+      });
+
+      // Gráfico de Ansiedad
+      const ctx2 = document.getElementById("anxietyChart").getContext("2d");
+      new Chart(ctx2, {
+        type: "bar",
+        data: {
+          labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo"],
+          datasets: [
+            {
+              label: "Nivel de Ansiedad",
+              data: [2, 4, 3, 5, 6],
+              backgroundColor: "rgba(54, 162, 235, 0.7)",
+              borderColor: "rgba(54, 162, 235, 1)",
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: true,
+              position: "top",
+            },
+          },
+        },
+      });
+
+      // Gráfico de Estado de Ánimo
+      const ctx3 = document.getElementById("moodChart").getContext("2d");
+      new Chart(ctx3, {
+        type: "pie",
+        data: {
+          labels: ["Positivo", "Neutral", "Negativo"],
+          datasets: [
+            {
+              data: [60, 30, 10],
+              backgroundColor: [
+                "rgba(75, 192, 192, 0.7)",
+                "rgba(255, 205, 86, 0.7)",
+                "rgba(255, 99, 132, 0.7)",
+              ],
+              borderColor: [
+                "rgba(75, 192, 192, 1)",
+                "rgba(255, 205, 86, 1)",
+                "rgba(255, 99, 132, 1)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: true,
+              position: "top",
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

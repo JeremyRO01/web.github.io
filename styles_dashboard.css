@@ -1,0 +1,97 @@
+/* General styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  background-color: #f3f4f6;
+  background: url("dash.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  color: #000000;
+}
+
+.dashboard-header {
+  background: linear-gradient(135deg, #0a89ff, #497ff3);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header .header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-header nav {
+  margin-top: 10px;
+}
+
+.dashboard-header .nav-link {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.dashboard-header .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.dashboard-main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: start;
+}
+
+/* Card styles */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-card {
+  grid-column: span 1;
+  max-width: 350px;
+}
+
+.progress-card {
+  grid-column: span 2;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #28527a;
+}
+
+.btn-primary {
+  padding: 12px 20px;
+  background-color: #28527a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #4f93ce;
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Evaluación de Salud Mental</title>
+    <link rel="stylesheet" href="styles_cuestionario.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Formulario de Evaluación de Salud Mental</h1>
+    </header>
+    <main>
+      <form id="evaluacion-form">
+        <section class="pregunta">
+          <label>1. Nombre completo</label>
+          <div class="nombre-campos">
+            <input type="text" placeholder="Nombre de pila" required />
+            <input type="text" placeholder="Apellido" required />
+          </div>
+        </section>
+
+        <section class="pregunta">
+          <label>2. ¿Cuál es tu edad?</label>
+          <select required>
+            <option value="" disabled selected>Por favor seleccione</option>
+            <option value="menor_18">Menor de 18</option>
+            <option value="18_25">18-25</option>
+            <option value="26_35">26-35</option>
+            <option value="36_45">36-45</option>
+            <option value="46_55">46-55</option>
+            <option value="mayor_55">Mayor de 55</option>
+          </select>
+        </section>
+
+        <section class="pregunta">
+          <label>3. Género</label>
+          <select required>
+            <option value="" disabled selected>Por favor seleccione</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+            <option value="prefiere_no_decirlo">Prefiero no decirlo</option>
+          </select>
+        </section>
+
+        <!-- Pregunta de Antecedentes -->
+        <section class="pregunta">
+          <label
+            >4. ¿Tienes antecedentes familiares de enfermedades mentales?</label
+          >
+          <select required>
+            <option value="" disabled selected>Por favor seleccione</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+          </select>
+        </section>
+
+        <!-- Diagnóstico Previo -->
+        <section class="pregunta">
+          <label
+            >5. ¿Has sido diagnosticado previamente con una enfermedad
+            mental?</label
+          >
+          <div class="opciones-radio">
+            <label
+              ><input type="radio" name="diagnostico" value="si" required />
+              Sí</label
+            >
+            <label
+              ><input type="radio" name="diagnostico" value="no" /> No</label
+            >
+          </div>
+        </section>
+        <section class="pregunta">
+          <label
+            >6. En una escala del 1 al 10, ¿cómo calificarías tu nivel actual de
+            estrés? (1 - Muy bajo, 10 - Muy alto)</label
+          >
+          <div class="escala">
+            <label
+              ><input type="radio" name="estres" value="1" required /> 1</label
+            >
+            <label><input type="radio" name="estres" value="2" /> 2</label>
+            <label><input type="radio" name="estres" value="3" /> 3</label>
+            <label><input type="radio" name="estres" value="4" /> 4</label>
+            <label><input type="radio" name="estres" value="5" /> 5</label>
+            <label><input type="radio" name="estres" value="6" /> 6</label>
+            <label><input type="radio" name="estres" value="7" /> 7</label>
+            <label><input type="radio" name="estres" value="8" /> 8</label>
+            <label><input type="radio" name="estres" value="9" /> 9</label>
+            <label><input type="radio" name="estres" value="10" /> 10</label>
+          </div>
+        </section>
+
+        <!-- Escala de ansiedad -->
+        <section class="pregunta">
+          <label
+            >7. En una escala del 1 al 10, ¿cómo calificarías tu nivel actual de
+            ansiedad? (1 - Muy bajo, 10 - Muy alto)</label
+          >
+          <div class="escala">
+            <label
+              ><input type="radio" name="ansiedad" value="1" required />
+              1</label
+            >
+            <label><input type="radio" name="ansiedad" value="2" /> 2</label>
+            <label><input type="radio" name="ansiedad" value="3" /> 3</label>
+            <label><input type="radio" name="ansiedad" value="4" /> 4</label>
+            <label><input type="radio" name="ansiedad" value="5" /> 5</label>
+            <label><input type="radio" name="ansiedad" value="6" /> 6</label>
+            <label><input type="radio" name="ansiedad" value="7" /> 7</label>
+            <label><input type="radio" name="ansiedad" value="8" /> 8</label>
+            <label><input type="radio" name="ansiedad" value="9" /> 9</label>
+            <label><input type="radio" name="ansiedad" value="10" /> 10</label>
+          </div>
+        </section>
+
+        <!-- Escala de depresión -->
+        <section class="pregunta">
+          <label
+            >8. En una escala del 1 al 10, ¿cómo calificarías tu nivel actual de
+            depresión? (1 - Muy bajo, 10 - Muy alto)</label
+          >
+          <div class="escala">
+            <label
+              ><input type="radio" name="depresion" value="1" required />
+              1</label
+            >
+            <label><input type="radio" name="depresion" value="2" /> 2</label>
+            <label><input type="radio" name="depresion" value="3" /> 3</label>
+            <label><input type="radio" name="depresion" value="4" /> 4</label>
+            <label><input type="radio" name="depresion" value="5" /> 5</label>
+            <label><input type="radio" name="depresion" value="6" /> 6</label>
+            <label><input type="radio" name="depresion" value="7" /> 7</label>
+            <label><input type="radio" name="depresion" value="8" /> 8</label>
+            <label><input type="radio" name="depresion" value="9" /> 9</label>
+            <label><input type="radio" name="depresion" value="10" /> 10</label>
+          </div>
+        </section>
+
+        <!-- Pregunta sobre cambios en el apetito -->
+        <section class="pregunta">
+          <label
+            >9. ¿Has experimentado cambios significativos en tu apetito o peso
+            recientemente?</label
+          >
+          <div class="opciones-radio">
+            <label
+              ><input type="radio" name="cambios_apetito" value="si" required />
+              Sí</label
+            >
+            <label
+              ><input type="radio" name="cambios_apetito" value="no" />
+              No</label
+            >
+          </div>
+        </section>
+
+        <!-- Pregunta sobre problemas para dormir -->
+        <section class="pregunta">
+          <label
+            >10. ¿Has experimentado dificultades para dormir o cambios en tus
+            patrones de sueño?</label
+          >
+          <div class="opciones-radio">
+            <label
+              ><input type="radio" name="dormir" value="si" required />
+              Sí</label
+            >
+            <label><input type="radio" name="dormir" value="no" /> No</label>
+          </div>
+        </section>
+
+        <!-- Pregunta sobre pensamientos de autolesión -->
+        <section class="pregunta">
+          <label
+            >11. ¿Has tenido pensamientos recurrentes de autolesión o
+            suicidio?</label
+          >
+          <div class="opciones-radio">
+            <label
+              ><input type="radio" name="autolesion" value="si" required />
+              Sí</label
+            >
+            <label
+              ><input type="radio" name="autolesion" value="no" /> No</label
+            >
+          </div>
+        </section>
+
+        <!-- Pregunta de texto -->
+        <section class="pregunta">
+          <label
+            >12. Si deseas proporcionar más información sobre tu estado de salud
+            mental, por favor házlo aquí</label
+          >
+          <textarea rows="4" placeholder="Escribe tu respuesta aquí"></textarea>
+        </section>
+
+        <button type="submit">Enviar Respuestas</button>
+      </form>
+    </main>
+  </body>
+</html>

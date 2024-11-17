@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard del Usuario</title>
+    <link rel="stylesheet" href="styles_dashboard.css" />
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <div class="header-content">
+        <h1>Bienvenido, [Nombre del Usuario]</h1>
+        <nav>
+          <a href="cuestionario.html" class="nav-link">Nuevo Cuestionario</a>
+          <a href="resultados.html" class="nav-link">Resultados</a>
+          <a href="index.html" class="nav-link">Cerrar Sesión</a>
+        </nav>
+      </div>
+    </header>
+    <main class="dashboard-main">
+      <section class="card profile-card">
+        <h2>Mi Perfil</h2>
+        <p><strong>Nombre:</strong> [Nombre del Usuario]</p>
+        <p><strong>Correo:</strong> [Correo del Usuario]</p>
+        <a href="editar_informacion.html" class="btn-primary"
+          >Editar Información</a
+        >
+        <!-- Cambiado de botón a enlace -->
+      </section>
+
+      <section class="card progress-card">
+        <h2>Progreso</h2>
+        <p>Aquí se mostrarán gráficos con el progreso de tu salud mental.</p>
+        <button
+          class="btn-primary"
+          onclick="window.location.href='graficos.html'"
+        >
+          Ver Gráficos
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
